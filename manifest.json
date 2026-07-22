@@ -3,5 +3,7 @@
   "name": "National Dex",
   "version": "0.0.26",
   "entry": "main.lua",
-  "api": 2
+  "api": 2,
+  "category": "POKEMON",
+  "description": "Adds additional POKEMON with sprites by Pongo1135."
 }

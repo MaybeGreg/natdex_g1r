@@ -76,16 +76,19 @@ return function(mod)
 	mod.content.pokemon:patch("ARBOK", { dex = dex_no })
 	dex_no = dex_no + 1
 
+	_PichuDexEntry = "It's too small to contain its electricity.\nWhen it discharges it ends up shocking itself.",
+	
 	-- Pikachu Line
 	mod.content.pokemon:register("PICHU", {
 	  id = "PICHU", 
 	  name = "PICHU", 
 	  dex = dex_no, 
-	  dex_entry = { 
+	  dexEntry = { 
 		heightFt = 1,
 		heightIn = 0,
 		kind = "TINY MOUSE",
-		weight = 4.4},
+		weight = 4.4,
+		text = "_PichuDexEntry"},
 	  types = { "ELECTRIC" },
 	  baseStats = { 
 		hp = 20, 
@@ -101,12 +104,15 @@ return function(mod)
 		  { level = 6, move = "TAIL_WHIP" },
 		  { level = 8, move = "THUNDER_WAVE" },
 		}, 
-		-- tms = {}
+	  tms = {"MEGA_PUNCH", "MEGA_KICK", "BODY_SLAM", "TAKE_DOWN", "DOUBLE_EDGE", "COUNTER", "SEISMIC_TOSS", "THUNDERBOLT", "THUNDER", "DIG", "DOUBLE_TEAM", "REFLECT", "BIDE", "SWIFT", "THUNDER_WAVE", "FLASH"},
 	  evolutions = { method = "FRIENDSHIP", species = "PIKACHU" },
 	  spriteFront = mod.assets:path("assets/pichu_front.png"),
 	  spriteBack = mod.assets:path("assets/pichu_back.png"),
-	  cry = mod.assets:path("assets/pichu_cry.wav"),
 	  frontSize = 5
+	})
+	mod.content.cries:register("PICHU", { file = mod.assets:path("assets/pichu_cry.wav") })
+	mod.content.icons:register("PICHU", {
+	  image = "assets/generated/icons/quadruped.png"
 	})
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("PIKACHU", { dex = dex_no })
