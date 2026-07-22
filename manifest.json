@@ -1,0 +1,7 @@
+{
+  "id": "natdex_g1r",
+  "name": "National Dex",
+  "version": "0.0.26",
+  "entry": "main.lua",
+  "api": 2
+}
