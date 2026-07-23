@@ -81,40 +81,40 @@ return function(mod)
 	-- Pikachu Line
 	mod.content.text:register("_PichuDexEntry", "It's too small to \ncontain its \nelectricity. When \nit discharges it\nends up shocking\nitself.")
 	mod.content.pokemon:register("PICHU", {
-	id = "PICHU", 
-	name = "PICHU", 
-	dex = dex_no, 
-	dexEntry = { 
-		heightFt = 1,
-		heightIn = 0,
-		kind = "TINY MOUSE",
-		weight = 4.4,
-		text = ("_PichuDexEntry")
-	},
-	types = { "ELECTRIC" },
-	baseStats = { 
-	hp = 20, 
-	attack = 40, 
-	defense = 15, 
-	speed = 60, 
-	special = 35 },
-	catchRate = 190, 
-	baseExp = 42, 
-	growthRate = "MEDIUM_FAST",
-	level1Moves = { "THUNDERSHOCK" }, 
-	learnset = {
-		{ level = 6, move = "TAIL_WHIP" },
-		{ level = 8, move = "THUNDER_WAVE" },
-	}, 
-	tms = {"MEGA_PUNCH", "MEGA_KICK", "BODY_SLAM", "TAKE_DOWN", "DOUBLE_EDGE", "COUNTER", "SEISMIC_TOSS", "THUNDERBOLT", "THUNDER", "DIG", "DOUBLE_TEAM", "REFLECT", "BIDE", "SWIFT", "THUNDER_WAVE", "FLASH"},
-	evolutions = { method = "FRIENDSHIP", species = "PIKACHU" },
-	spriteFront = mod.assets:path("assets/pichu_front.png"),
-	spriteBack = mod.assets:path("assets/pichu_back.png"),
-	frontSize = 5
-	})
-	mod.content.cries:register("PICHU", { file = mod.assets:path("assets/pichu_cry.wav") })
-	mod.content.icons:register("PICHU", {
-	image = "assets/generated/icons/quadruped.png"
+		id = "PICHU", 
+		name = "PICHU", 
+		dex = dex_no, 
+		dexEntry = { 
+			heightFt = 1,
+			heightIn = 0,
+			kind = "TINY MOUSE",
+			weight = 4.4,
+			text = ("_PichuDexEntry")
+		},
+		types = { "ELECTRIC" },
+		baseStats = { 
+		hp = 20, 
+		attack = 40, 
+		defense = 15, 
+		speed = 60, 
+		special = 35 },
+		catchRate = 190, 
+		baseExp = 42, 
+		growthRate = "MEDIUM_FAST",
+		level1Moves = { "THUNDERSHOCK" }, 
+		learnset = {
+			{ level = 6, move = "TAIL_WHIP" },
+			{ level = 8, move = "THUNDER_WAVE" },
+		}, 
+		tms = {"MEGA_PUNCH", "MEGA_KICK", "BODY_SLAM", "TAKE_DOWN", "DOUBLE_EDGE", "COUNTER", "SEISMIC_TOSS", "THUNDERBOLT", "THUNDER", "DIG", "DOUBLE_TEAM", "REFLECT", "BIDE", "SWIFT", "THUNDER_WAVE", "FLASH"},
+		evolutions = { method = "FRIENDSHIP", species = "PIKACHU" },
+		spriteFront = mod.assets:path("assets/pichu_front.png"),
+		spriteBack = mod.assets:path("assets/pichu_back.png"),
+		frontSize = 5
+		})
+		mod.content.cries:register("PICHU", { file = mod.assets:path("assets/pichu_cry.wav") })
+		mod.content.icons:register("PICHU", {
+		image = "assets/generated/icons/quadruped.png"
 	})
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("PIKACHU", { dex = dex_no })
@@ -145,6 +145,7 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Clefairy Line
+	-- NEW MON: CLEFFA
 	mod.content.pokemon:patch("CLEFAIRY", { dex = dex_no })
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("CLEFABLE", { dex = dex_no })
@@ -157,6 +158,7 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Jigglypuff Line
+	-- NEW MON: IGGLYBUFF
 	mod.content.pokemon:patch("JIGGLYPUFF", { dex = dex_no })
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("WIGGLYTUFF", { dex = dex_no })
@@ -167,6 +169,7 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("GOLBAT", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: CROBAT
 
 	-- Oddish Line
 	mod.content.pokemon:patch("ODDISH", { dex = dex_no })
@@ -175,6 +178,7 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("VILEPLUME", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: BELLOSSOM
 
 	-- Paras Line
 	mod.content.pokemon:patch("PARAS", { dex = dex_no })
@@ -211,6 +215,7 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("PRIMEAPE", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: ANNIHILAPE
 
 	-- Growlithe Line
 	mod.content.pokemon:patch("GROWLITHE", { dex = dex_no })
@@ -225,6 +230,7 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("POLIWRATH", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: POLITOED
 
 	-- Abra Line
 	mod.content.pokemon:patch("ABRA", { dex = dex_no })
@@ -275,12 +281,14 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("SLOWBRO", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: SLOWKING
 
 	-- Magnemite Line
 	mod.content.pokemon:patch("MAGNEMITE", { dex = dex_no })
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("MAGNETON", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: MAGNEZONE
 
 	-- Farfetch’d Line
 	mod.content.pokemon:patch("FARFETCHD", { dex = dex_no })
@@ -321,6 +329,7 @@ return function(mod)
 	-- Onix Line
 	mod.content.pokemon:patch("ONIX", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: STEELIX
 
 	-- Drowzee Line
 	mod.content.pokemon:patch("DROWZEE", { dex = dex_no })
@@ -353,14 +362,17 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Hitmon Line
+	-- NEW MON: TYROGUE
 	mod.content.pokemon:patch("HITMONLEE", { dex = dex_no })
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("HITMONCHAN", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: HITMONTOP
 
 	-- Lickitung Line
 	mod.content.pokemon:patch("LICKITUNG", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: LICKILICKY
 
 	-- Koffing Line
 	mod.content.pokemon:patch("KOFFING", { dex = dex_no })
@@ -373,14 +385,18 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("RHYDON", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: RHYPERIOR
 
 	-- Chansey Line
+	-- NEW MON: HAPPINY
 	mod.content.pokemon:patch("CHANSEY", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: BLISSEY
 
 	-- Tangela Line
 	mod.content.pokemon:patch("TANGELA", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: TANGROWTH
 
 	-- Kangaskhan Line
 	mod.content.pokemon:patch("KANGASKHAN", { dex = dex_no })
@@ -391,6 +407,7 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("SEADRA", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: KINGDRA
 
 	-- Goldeen Line
 	mod.content.pokemon:patch("GOLDEEN", { dex = dex_no })
@@ -405,24 +422,32 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Mr. Mime Line
+	-- NEW MON: MIME JR.
 	mod.content.pokemon:patch("MRMIME", { dex = dex_no })
 	dex_no = dex_no + 1
 
 	-- Scyther Line
 	mod.content.pokemon:patch("SCYTHER", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: SCIZOR
+	-- NEW MON: KLEAVOR
 
 	-- Jynx Line
+	-- NEW MON: SMOOCHUM
 	mod.content.pokemon:patch("JYNX", { dex = dex_no })
 	dex_no = dex_no + 1
 
 	-- Electabuzz Line
+	-- NEW MON: ELEKID
 	mod.content.pokemon:patch("ELECTABUZZ", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: ELECTIVIRE
 
 	-- Magmar Line
+	-- NEW MON: MAGBY
 	mod.content.pokemon:patch("MAGMAR", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: MAGMORTAR
 
 	-- Pinsir Line
 	mod.content.pokemon:patch("PINSIR", { dex = dex_no })
@@ -455,10 +480,17 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("FLAREON", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: ESPEON
+	-- NEW MON: UMBREON
+	-- NEW MON: LEAFEON
+	-- NEW MON: GLACEON
+	-- NEW MON: SYLVEON
 
 	-- Porygon Line
 	mod.content.pokemon:patch("PORYGON", { dex = dex_no })
 	dex_no = dex_no + 1
+	-- NEW MON: PORYGON2
+	-- NEW MON: PORYGON-Z
 
 	-- Omanyte Line
 	mod.content.pokemon:patch("OMANYTE", { dex = dex_no })
@@ -477,6 +509,7 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Snorlax Line
+	-- NEW MON: MUNCHLAX
 	mod.content.pokemon:patch("SNORLAX", { dex = dex_no })
 	dex_no = dex_no + 1
 
