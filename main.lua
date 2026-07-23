@@ -1,9 +1,9 @@
 return function(mod)
 	-- Friendship evolutions
 	mod.content.evolution_methods:register("FRIENDSHIP", {
-	  check = function(game, mon, evo, trigger)
+		check = function(game, mon, evo, trigger)
 		return trigger.kind == "levelup" and (mon.friendship or 0) >= 220
-	  end,
+		end,
 	})
 
 	-- Start from One
@@ -76,43 +76,45 @@ return function(mod)
 	mod.content.pokemon:patch("ARBOK", { dex = dex_no })
 	dex_no = dex_no + 1
 
-	_PichuDexEntry = "It's too small to contain its electricity.\nWhen it discharges it ends up shocking itself.",
 	
+
 	-- Pikachu Line
+	mod.content.text:register("_PichuDexEntry", "It's too small to \ncontain its \nelectricity. When \nit discharges it\nends up shocking\nitself.")
 	mod.content.pokemon:register("PICHU", {
-	  id = "PICHU", 
-	  name = "PICHU", 
-	  dex = dex_no, 
-	  dexEntry = { 
+	id = "PICHU", 
+	name = "PICHU", 
+	dex = dex_no, 
+	dexEntry = { 
 		heightFt = 1,
 		heightIn = 0,
 		kind = "TINY MOUSE",
 		weight = 4.4,
-		text = "_PichuDexEntry"},
-	  types = { "ELECTRIC" },
-	  baseStats = { 
-		hp = 20, 
-		attack = 40, 
-		defense = 15, 
-		speed = 60, 
-		special = 35 },
-	  catchRate = 190, 
-	  baseExp = 42, 
-	  growthRate = "MEDIUM_FAST",
-	  level1Moves = { "THUNDERSHOCK" }, 
-	  learnset = {
-		  { level = 6, move = "TAIL_WHIP" },
-		  { level = 8, move = "THUNDER_WAVE" },
-		}, 
-	  tms = {"MEGA_PUNCH", "MEGA_KICK", "BODY_SLAM", "TAKE_DOWN", "DOUBLE_EDGE", "COUNTER", "SEISMIC_TOSS", "THUNDERBOLT", "THUNDER", "DIG", "DOUBLE_TEAM", "REFLECT", "BIDE", "SWIFT", "THUNDER_WAVE", "FLASH"},
-	  evolutions = { method = "FRIENDSHIP", species = "PIKACHU" },
-	  spriteFront = mod.assets:path("assets/pichu_front.png"),
-	  spriteBack = mod.assets:path("assets/pichu_back.png"),
-	  frontSize = 5
+		text = ("_PichuDexEntry")
+	},
+	types = { "ELECTRIC" },
+	baseStats = { 
+	hp = 20, 
+	attack = 40, 
+	defense = 15, 
+	speed = 60, 
+	special = 35 },
+	catchRate = 190, 
+	baseExp = 42, 
+	growthRate = "MEDIUM_FAST",
+	level1Moves = { "THUNDERSHOCK" }, 
+	learnset = {
+		{ level = 6, move = "TAIL_WHIP" },
+		{ level = 8, move = "THUNDER_WAVE" },
+	}, 
+	tms = {"MEGA_PUNCH", "MEGA_KICK", "BODY_SLAM", "TAKE_DOWN", "DOUBLE_EDGE", "COUNTER", "SEISMIC_TOSS", "THUNDERBOLT", "THUNDER", "DIG", "DOUBLE_TEAM", "REFLECT", "BIDE", "SWIFT", "THUNDER_WAVE", "FLASH"},
+	evolutions = { method = "FRIENDSHIP", species = "PIKACHU" },
+	spriteFront = mod.assets:path("assets/pichu_front.png"),
+	spriteBack = mod.assets:path("assets/pichu_back.png"),
+	frontSize = 5
 	})
 	mod.content.cries:register("PICHU", { file = mod.assets:path("assets/pichu_cry.wav") })
 	mod.content.icons:register("PICHU", {
-	  image = "assets/generated/icons/quadruped.png"
+	image = "assets/generated/icons/quadruped.png"
 	})
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("PIKACHU", { dex = dex_no })
@@ -508,9 +510,9 @@ return function(mod)
 
 	-- Testing Code
 	mod.content.encounters:patch("ROUTE_1", {
-	  grass = { slots = { __prepend = { { species = "PICHU", level = 5 } } } },
+	grass = { slots = { __prepend = { { species = "PICHU", level = 5 } } } },
 	})
-	  
+
 	-- Adjust the Pokédex Size
 	mod.content.constants:patch("dexSize", dex_no)
-end
+	end
