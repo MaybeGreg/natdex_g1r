@@ -80,6 +80,7 @@ return function(mod)
 
 	-- Pikachu Line
 	mod.content.text:register("_PichuDexEntry", "It's too small to \ncontain its \nelectricity. When \nit discharges it\nends up shocking\nitself.")
+	mod.content.palettes:register("PICHU", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
 	mod.content.pokemon:register("PICHU", {
 		id = "PICHU", 
 		name = "PICHU", 
@@ -88,7 +89,7 @@ return function(mod)
 			heightFt = 1,
 			heightIn = 0,
 			kind = "TINY MOUSE",
-			weight = 4.4,
+			weight = 44,
 			text = ("_PichuDexEntry")
 		},
 		types = { "ELECTRIC" },
@@ -106,16 +107,38 @@ return function(mod)
 			{ level = 6, move = "TAIL_WHIP" },
 			{ level = 8, move = "THUNDER_WAVE" },
 		}, 
-		tms = {"MEGA_PUNCH", "MEGA_KICK", "BODY_SLAM", "TAKE_DOWN", "DOUBLE_EDGE", "COUNTER", "SEISMIC_TOSS", "THUNDERBOLT", "THUNDER", "DIG", "DOUBLE_TEAM", "REFLECT", "BIDE", "SWIFT", "THUNDER_WAVE", "FLASH"},
-		evolutions = { method = "FRIENDSHIP", species = "PIKACHU" },
+		tmhm = {
+			"MEGA_PUNCH",
+			"MEGA_KICK",
+			"TOXIC",
+			"BODY_SLAM",
+			"TAKE_DOWN",
+			"DOUBLE_EDGE",
+			"PAY_DAY",
+			"SUBMISSION",
+			"SEISMIC_TOSS",
+			"RAGE",
+			"THUNDERBOLT",
+			"THUNDER",
+			"MIMIC",
+			"DOUBLE_TEAM",
+			"REFLECT",
+			"BIDE",
+			"SWIFT",
+			"SKULL_BASH",
+			"REST",
+			"THUNDER_WAVE",
+			"SUBSTITUTE",
+			"FLASH",
+		},
+		evolutions = { { method = "FRIENDSHIP", species = "PIKACHU" }, { method = "LEVEL", level = 15, species = "PIKACHU" } },
 		spriteFront = mod.assets:path("assets/pichu_front.png"),
 		spriteBack = mod.assets:path("assets/pichu_back.png"),
-		frontSize = 5
-		})
-		mod.content.cries:register("PICHU", { file = mod.assets:path("assets/pichu_cry.wav") })
-		mod.content.icons:register("PICHU", {
-		image = "assets/generated/icons/quadruped.png"
+		frontSize = 5,
+		palette = "PICHU"
 	})
+	mod.content.cries:register("PICHU", { file = mod.assets:path("assets/pichu_cry.wav") })
+	mod.content.icons:register("PICHU", { image = "quadruped" })
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("PIKACHU", { dex = dex_no })
 	dex_no = dex_no + 1
@@ -388,7 +411,81 @@ return function(mod)
 	-- NEW MON: RHYPERIOR
 
 	-- Chansey Line
-	-- NEW MON: HAPPINY
+	mod.content.text:register("_HappinyDexEntry", "It likes to collect\nand carry white\nround stones. It\ngives its stone to\nthose it considers\nits friend.")
+	mod.content.palettes:register("HAPPINY", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
+	mod.content.pokemon:register("HAPPINY", {
+		id = "HAPPINY", 
+		name = "HAPPINY", 
+		dex = dex_no, 
+		dexEntry = { 
+			heightFt = 2,
+			heightIn = 0,
+			kind = "PLAYHOUSE   ",
+			weight = 538,
+			text = ("_HappinyDexEntry")
+		},
+		types = { "NORMAL" },
+		baseStats = { 
+			hp = 100, 
+			attack = 5, 
+			defense = 5, 
+			speed = 30, 
+			special = 65 
+		},
+		catchRate = 130, 
+		baseExp = 255, 
+		growthRate = "FAST",
+		level1Moves = { "POUND" }, 
+		learnset = {
+			{ level = 4, move = "DEFENSE_CURL" },
+		}, 
+		tmhm = {
+			"MEGA_PUNCH",
+			"MEGA_KICK",
+			"TOXIC",
+			"BODY_SLAM",
+			"TAKE_DOWN",
+			"DOUBLE_EDGE",
+			"BUBBLEBEAM",
+			"WATER_GUN",
+			"ICE_BEAM",
+			"BLIZZARD",
+			"HYPER_BEAM",
+			"SUBMISSION",
+			"COUNTER",
+			"SEISMIC_TOSS",
+			"RAGE",
+			"SOLARBEAM",
+			"THUNDERBOLT",
+			"THUNDER",
+			"PSYCHIC_M",
+			"TELEPORT",
+			"MIMIC",
+			"DOUBLE_TEAM",
+			"REFLECT",
+			"BIDE",
+			"METRONOME",
+			"EGG_BOMB",
+			"FIRE_BLAST",
+			"SKULL_BASH",
+			"SOFTBOILED",
+			"REST",
+			"THUNDER_WAVE",
+			"PSYWAVE",
+			"TRI_ATTACK",
+			"SUBSTITUTE",
+			"STRENGTH",
+			"FLASH",
+		},
+		evolutions = { { method = "FRIENDSHIP", species = "CHANSEY" }, { method = "LEVEL", level = 15, species = "CHANSEY" } },
+		spriteFront = mod.assets:path("assets/happiny_front.png"),
+		spriteBack = mod.assets:path("assets/happiny_back.png"),
+		frontSize = 5,
+		palette = "HAPPINY"
+	})
+	mod.content.cries:register("HAPPINY", { file = mod.assets:path("assets/happiny_cry.wav") })
+	mod.content.icons:register("HAPPINY", { image = "quadruped" })
+	dex_no = dex_no + 1
 	mod.content.pokemon:patch("CHANSEY", { dex = dex_no })
 	dex_no = dex_no + 1
 	-- NEW MON: BLISSEY
@@ -543,7 +640,7 @@ return function(mod)
 
 	-- Testing Code
 	mod.content.encounters:patch("ROUTE_1", {
-	grass = { slots = { __prepend = { { species = "PICHU", level = 5 } } } },
+	grass = { slots = { __prepend = { { species = "HAPPINY", level = 5 } } } },
 	})
 
 	-- Adjust the Pokédex Size
