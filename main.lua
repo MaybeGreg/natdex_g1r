@@ -138,7 +138,7 @@ return function(mod)
 		palette = "PICHU"
 	})
 	mod.content.cries:register("PICHU", { file = mod.assets:path("assets/pichu_cry.wav") })
-	mod.content.icons:register("PICHU", { image = "quadruped" })
+	mod.content.icons:register("PICHU", "FAIRY")
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("PIKACHU", { dex = dex_no })
 	dex_no = dex_no + 1
@@ -168,7 +168,77 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Clefairy Line
-	-- NEW MON: CLEFFA
+	mod.content.text:register("_CleffaDexEntry", "TO BE WRITTEN.")
+	mod.content.palettes:register("CLEFFA", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
+	mod.content.pokemon:register("CLEFFA", {
+		id = "CLEFFA", 
+		name = "CLEFFA", 
+		dex = dex_no, 
+		dexEntry = { 
+			heightFt = 1,
+			heightIn = 0,
+			kind = "STAR SHAPE   ",
+			weight = 66,
+			text = ("_CleffaDexEntry")
+		},
+		types = { "NORMAL" },
+		baseStats = { 
+		hp = 50, 
+		attack = 25, 
+		defense = 28, 
+		speed = 15, 
+		special = 55 },
+		catchRate = 150, 
+		baseExp = 37, 
+		growthRate = "FAST",
+		level1Moves = { "POUND" }, 
+		learnset = {
+			{ level = 8, move = "SING" },
+		}, 
+		tmhm = {
+			"MEGA_PUNCH",
+			"MEGA_KICK",
+			"TOXIC",
+			"BODY_SLAM",
+			"TAKE_DOWN",
+			"DOUBLE_EDGE",
+			"BUBBLEBEAM",
+			"WATER_GUN",
+			"ICE_BEAM",
+			"BLIZZARD",
+			"SUBMISSION",
+			"COUNTER",
+			"SEISMIC_TOSS",
+			"RAGE",
+			"SOLARBEAM",
+			"THUNDERBOLT",
+			"THUNDER",
+			"PSYCHIC_M",
+			"TELEPORT",
+			"MIMIC",
+			"DOUBLE_TEAM",
+			"REFLECT",
+			"BIDE",
+			"METRONOME",
+			"FIRE_BLAST",
+			"SKULL_BASH",
+			"REST",
+			"THUNDER_WAVE",
+			"PSYWAVE",
+			"TRI_ATTACK",
+			"SUBSTITUTE",
+			"STRENGTH",
+			"FLASH",
+		},
+		evolutions = { { method = "FRIENDSHIP", species = "CLEFAIRY" }, { method = "LEVEL", level = 15, species = "CLEFAIRY" } },
+		spriteFront = mod.assets:path("assets/_temp_front.png"),
+		spriteBack = mod.assets:path("assets/_temp_back.png"),
+		frontSize = 5,
+		palette = "CLEFFA"
+	})
+	mod.content.cries:register("CLEFFA", { file = mod.assets:path("assets/cleffa_cry.wav") })
+	mod.content.icons:register("CLEFFA", "FAIRY")
+	dex_no = dex_no + 1
 	mod.content.pokemon:patch("CLEFAIRY", { dex = dex_no })
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("CLEFABLE", { dex = dex_no })
@@ -181,7 +251,76 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Jigglypuff Line
-	-- NEW MON: IGGLYBUFF
+	mod.content.text:register("_IgglybuffDexEntry", "TO BE WRITTEN.")
+	mod.content.palettes:register("IGGLYBUFF", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
+	mod.content.pokemon:register("IGGLYBUFF", {
+		id = "IGGLYBUFF", 
+		name = "IGGLYBUFF", 
+		dex = dex_no, 
+		dexEntry = { 
+			heightFt = 1,
+			heightIn = 0,
+			kind = "BALLOON      ",
+			weight = 33,
+			text = ("_IgglybuffDexEntry")
+		},
+		types = { "NORMAL" },
+		baseStats = { 
+		hp = 90, 
+		attack = 30, 
+		defense = 15, 
+		speed = 15, 
+		special = 40 },
+		catchRate = 170, 
+		baseExp = 39, 
+		growthRate = "FAST",
+		level1Moves = { "POUND","SING" }, 
+		learnset = {
+			{ level = 4, move = "DEFENSE_CURL" },
+		}, 
+		tmhm = {
+		  "MEGA_PUNCH",
+		  "MEGA_KICK",
+		  "TOXIC",
+		  "BODY_SLAM",
+		  "TAKE_DOWN",
+		  "DOUBLE_EDGE",
+		  "BUBBLEBEAM",
+		  "WATER_GUN",
+		  "ICE_BEAM",
+		  "BLIZZARD",
+		  "SUBMISSION",
+		  "COUNTER",
+		  "SEISMIC_TOSS",
+		  "RAGE",
+		  "SOLARBEAM",
+		  "THUNDERBOLT",
+		  "THUNDER",
+		  "PSYCHIC_M",
+		  "TELEPORT",
+		  "MIMIC",
+		  "DOUBLE_TEAM",
+		  "REFLECT",
+		  "BIDE",
+		  "FIRE_BLAST",
+		  "SKULL_BASH",
+		  "REST",
+		  "THUNDER_WAVE",
+		  "PSYWAVE",
+		  "TRI_ATTACK",
+		  "SUBSTITUTE",
+		  "STRENGTH",
+		  "FLASH",
+		},
+		evolutions = { { method = "FRIENDSHIP", species = "JIGGLYPUFF" }, { method = "LEVEL", level = 15, species = "JIGGLYPUFF" } },
+		spriteFront = mod.assets:path("assets/_temp_front.png"),
+		spriteBack = mod.assets:path("assets/_temp_back.png"),
+		frontSize = 5,
+		palette = "IGGLYBUFF"
+	})
+	mod.content.cries:register("IGGLYBUFF", { file = mod.assets:path("assets/igglybuff_cry.wav") })
+	mod.content.icons:register("IGGLYBUFF", "FAIRY")
+	dex_no = dex_no + 1
 	mod.content.pokemon:patch("JIGGLYPUFF", { dex = dex_no })
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("WIGGLYTUFF", { dex = dex_no })
@@ -190,19 +329,128 @@ return function(mod)
 	-- Zubat Line
 	mod.content.pokemon:patch("ZUBAT", { dex = dex_no })
 	dex_no = dex_no + 1
-	mod.content.pokemon:patch("GOLBAT", { dex = dex_no })
+	mod.content.pokemon:patch("GOLBAT", { dex = dex_no,
+		evolutions = { { method = "FRIENDSHIP", species = "CROBAT" }, { method = "LEVEL", level = 45, species = "CROBAT" } },	})
 	dex_no = dex_no + 1
-	-- NEW MON: CROBAT
+	mod.content.text:register("_CrobatDexEntry", "TO BE WRITTEN.")
+	mod.content.palettes:register("CROBAT", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
+	mod.content.pokemon:register("CROBAT", {
+		id = "CROBAT", 
+		name = "CROBAT", 
+		dex = dex_no, 
+		dexEntry = { 
+			heightFt = 5,
+			heightIn = 11,
+			kind = "BAT         ",
+			weight = 1653,
+			text = ("_CrobatDexEntry")
+		},
+		types = { "POISON", "FLYING" },
+		baseStats = { 
+		hp = 85, 
+		attack = 90, 
+		defense = 80, 
+		speed = 130, 
+		special = 80 },
+		catchRate = 90, 
+		baseExp = 204, 
+		growthRate = "MEDIUM_FAST",
+		level1Moves = { "SCREECH","LEECH_LIFE","SUPERSONIC" }, 
+		learnset = {
+			{ level = 12, move = "BITE" },
+			{ level = 19, move = "CONFUSE_RAY" },
+			{ level = 30, move = "WING_ATTACK" },
+			{ level = 55, move = "HAZE" },
+		}, 
+		tmhm = {
+		  "RAZOR_WIND",
+		  "WHIRLWIND",
+		  "TOXIC",
+		  "TAKE_DOWN",
+		  "DOUBLE_EDGE",
+		  "HYPER_BEAM",
+		  "RAGE",
+		  "MEGA_DRAIN",
+		  "MIMIC",
+		  "DOUBLE_TEAM",
+		  "BIDE",
+		  "SWIFT",
+		  "REST",
+		  "SUBSTITUTE",
+		  "FLY",
+		},
+		spriteFront = mod.assets:path("assets/_temp_front.png"),
+		spriteBack = mod.assets:path("assets/_temp_back.png"),
+		frontSize = 5,
+		palette = "CROBAT",
+		evolutions = {}
+	})
+	mod.content.cries:register("CROBAT", { file = mod.assets:path("assets/crobat_cry.wav") })
+	mod.content.icons:register("CROBAT", "MON")
+	dex_no = dex_no + 1
 
 	-- Oddish Line
 	mod.content.pokemon:patch("ODDISH", { dex = dex_no })
 	dex_no = dex_no + 1
-	mod.content.pokemon:patch("GLOOM", { dex = dex_no })
+	mod.content.pokemon:patch("GLOOM", { dex = dex_no,
+		evolutions = { { method = "LEVEL", level = 45, species = "BELLOSSOM" } }	
+	})
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("VILEPLUME", { dex = dex_no })
 	dex_no = dex_no + 1
-	-- NEW MON: BELLOSSOM
-
+	mod.content.text:register("_BellossomDexEntry", "TO BE WRITTEN.")
+	mod.content.palettes:register("BELLOSSOM", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
+	mod.content.pokemon:register("BELLOSSOM", {
+		id = "BELLOSSOM", 
+		name = "BELLOSSOM", 
+		dex = dex_no, 
+		dexEntry = { 
+			heightFt = 1,
+			heightIn = 4,
+			kind = "FLOWER         ",
+			weight = 128,
+			text = ("_BellossomDexEntry")
+		},
+		types = { "GRASS" },
+		baseStats = { 
+		hp = 75, 
+		attack = 80, 
+		defense = 85, 
+		speed = 50, 
+		special = 100 },
+		catchRate = 45, 
+		baseExp = 184, 
+		growthRate = "MEDIUM_SLOW",
+		level1Moves = { "ABSORB","STUN_SPORE","PETAL_DANCE" }, 
+		learnset = {
+			{ level = 55, move = "SOLARBEAM" },
+		}, 
+		tmhm = {
+		  "SWORDS_DANCE",
+		  "TOXIC",
+		  "TAKE_DOWN",
+		  "DOUBLE_EDGE",
+		  "RAGE",
+		  "MEGA_DRAIN",
+		  "SOLARBEAM",
+		  "MIMIC",
+		  "DOUBLE_TEAM",
+		  "REFLECT",
+		  "BIDE",
+		  "REST",
+		  "SUBSTITUTE",
+		  "CUT",
+		},
+		spriteFront = mod.assets:path("assets/_temp_front.png"),
+		spriteBack = mod.assets:path("assets/_temp_back.png"),
+		frontSize = 5,
+		palette = "BELLOSSOM",
+		evolutions = {}
+	})
+	mod.content.cries:register("BELLOSSOM", { file = mod.assets:path("assets/bellossom_cry.wav") })
+	mod.content.icons:register("BELLOSSOM", "GRASS")
+	dex_no = dex_no + 1
+	
 	-- Paras Line
 	mod.content.pokemon:patch("PARAS", { dex = dex_no })
 	dex_no = dex_no + 1
@@ -236,9 +484,77 @@ return function(mod)
 	-- Mankey Line
 	mod.content.pokemon:patch("MANKEY", { dex = dex_no })
 	dex_no = dex_no + 1
-	mod.content.pokemon:patch("PRIMEAPE", { dex = dex_no })
+	mod.content.pokemon:patch("PRIMEAPE", { dex = dex_no,
+		evolutions = { { method = "LEVEL", level = 45, species = "ANNIHILAPE" } }	
+	})
 	dex_no = dex_no + 1
-	-- NEW MON: ANNIHILAPE
+	mod.content.text:register("_AnnihilapeDexEntry", "TO BE WRITTEN.")
+	mod.content.palettes:register("ANNIHILAPE", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
+	mod.content.pokemon:register("ANNIHILAPE", {
+		id = "ANNIHILAPE", 
+		name = "ANNIHILAPE", 
+		dex = dex_no, 
+		dexEntry = { 
+			heightFt = 3,
+			heightIn = 11,
+			kind = "RAGE MONKEY         ",
+			weight = 1235,
+			text = ("_AnnihilapeDexEntry")
+		},
+		types = { "FIGHTING", "GHOST" },
+		baseStats = { 
+			hp = 110, 
+			attack = 115, 
+			defense = 80, 
+			speed = 90, 
+			special = 90 },
+		catchRate = 45, 
+		baseExp = 168, 
+		growthRate = "MEDIUM_FAST",
+		level1Moves = { "COUNTER","SCRATCH","LEER","FOCUS_ENERGY" }, 
+		learnset = {
+			{ level = 5, move = "FURY_SWIPES" },
+			{ level = 8, move = "LOW_KICK" },
+			{ level = 12, move = "SEISMIC_TOSS" },
+			{ level = 30, move = "THRASH" },
+			{ level = 44, move = "SCREECH" },
+		}, 
+		tmhm = {
+		  "MEGA_PUNCH",
+		  "MEGA_KICK",
+		  "TOXIC",
+		  "BODY_SLAM",
+		  "TAKE_DOWN",
+		  "DOUBLE_EDGE",
+		  "HYPER_BEAM",
+		  "PAY_DAY",
+		  "SUBMISSION",
+		  "COUNTER",
+		  "SEISMIC_TOSS",
+		  "RAGE",
+		  "THUNDERBOLT",
+		  "THUNDER",
+		  "DIG",
+		  "MIMIC",
+		  "DOUBLE_TEAM",
+		  "BIDE",
+		  "METRONOME",
+		  "SWIFT",
+		  "SKULL_BASH",
+		  "REST",
+		  "ROCK_SLIDE",
+		  "SUBSTITUTE",
+		  "STRENGTH",
+		},
+		spriteFront = mod.assets:path("assets/_temp_front.png"),
+		spriteBack = mod.assets:path("assets/_temp_back.png"),
+		frontSize = 5,
+		palette = "ANNIHILAPE",
+		evolutions = {}
+	})
+	mod.content.cries:register("ANNIHILAPE", { file = mod.assets:path("assets/annihilape_cry.wav") })
+	mod.content.icons:register("ANNIHILAPE", "MON")
+	dex_no = dex_no + 1
 
 	-- Growlithe Line
 	mod.content.pokemon:patch("GROWLITHE", { dex = dex_no })
@@ -247,13 +563,88 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Poliwag Line
-	mod.content.pokemon:patch("POLIWAG", { dex = dex_no })
+	mod.content.pokemon:patch("POLIWAG", { dex = dex_no } )
 	dex_no = dex_no + 1
-	mod.content.pokemon:patch("POLIWHIRL", { dex = dex_no })
+	mod.content.pokemon:patch("POLIWHIRL", { dex = dex_no,
+		evolutions = {
+		  {
+			item = "WATER_STONE",
+			level = 1,
+			method = "ITEM",
+			species = "POLIWRATH",
+		  },
+		  { 
+			method = "LEVEL",
+			level = 40,
+			species = "POLITOED"
+		} 
+	}})
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("POLIWRATH", { dex = dex_no })
 	dex_no = dex_no + 1
-	-- NEW MON: POLITOED
+	mod.content.text:register("_PolitoedDexEntry", "TO BE WRITTEN.")
+	mod.content.palettes:register("POLITOED", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
+	mod.content.pokemon:register("POLITOED", {
+		id = "POLITOED", 
+		name = "POLITOED", 
+		dex = dex_no, 
+		dexEntry = { 
+			heightFt = 3,
+			heightIn = 7,
+			kind = "FROG         ",
+			weight = 747,
+			text = ("_PolitoedDexEntry")
+		},
+		types = { "WATER" },
+		baseStats = { 
+			hp = 90, 
+			attack = 75, 
+			defense = 75, 
+			speed = 70, 
+			special = 100 },
+		catchRate = 45, 
+		baseExp = 185, 
+		growthRate = "MEDIUM_SLOW",
+		level1Moves = { "WATER_GUN", "HYPNOSIS", "DOUBLESLAP" }, 
+		learnset = {}, 
+		tmhm = {
+		  "MEGA_PUNCH",
+		  "MEGA_KICK",
+		  "TOXIC",
+		  "BODY_SLAM",
+		  "TAKE_DOWN",
+		  "DOUBLE_EDGE",
+		  "BUBBLEBEAM",
+		  "WATER_GUN",
+		  "ICE_BEAM",
+		  "BLIZZARD",
+		  "SUBMISSION",
+		  "COUNTER",
+		  "SEISMIC_TOSS",
+		  "RAGE",
+		  "EARTHQUAKE",
+		  "FISSURE",
+		  "PSYCHIC_M",
+		  "MIMIC",
+		  "DOUBLE_TEAM",
+		  "BIDE",
+		  "METRONOME",
+		  "SKULL_BASH",
+		  "REST",
+		  "PSYWAVE",
+		  "SUBSTITUTE",
+		  "SURF",
+		  "STRENGTH",
+		},
+		spriteFront = mod.assets:path("assets/_temp_front.png"),
+		spriteBack = mod.assets:path("assets/_temp_back.png"),
+		frontSize = 5,
+		palette = "POLITOED",
+		evolutions = {}
+	})
+	mod.content.cries:register("POLITOED", { file = mod.assets:path("assets/politoed_cry.wav") })
+	mod.content.icons:register("POLITOED", "MON")
+	dex_no = dex_no + 1
 
 	-- Abra Line
 	mod.content.pokemon:patch("ABRA", { dex = dex_no })
@@ -300,18 +691,171 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Slowpoke Line
-	mod.content.pokemon:patch("SLOWPOKE", { dex = dex_no })
+	mod.content.pokemon:patch("SLOWPOKE", { dex = dex_no, 
+	evolutions = {
+      {
+        level = 37,
+        method = "LEVEL",
+        species = "SLOWBRO",
+      },
+	  {
+		item = "MOON_STONE",
+		level = 1,
+		method = "ITEM",
+		species = "SLOWKING"
+    }, }})	
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("SLOWBRO", { dex = dex_no })
 	dex_no = dex_no + 1
-	-- NEW MON: SLOWKING
+	mod.content.text:register("_SlowkingDexEntry", "TO BE WRITTEN.")
+	mod.content.palettes:register("SLOWKING", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
+	mod.content.pokemon:register("SLOWKING", {
+		id = "SLOWKING", 
+		name = "SLOWKING", 
+		dex = dex_no, 
+		dexEntry = { 
+			heightFt = 6,
+			heightIn = 7,
+			kind = "ROYAL         ",
+			weight = 1753,
+			text = ("_SlowkingDexEntry")
+		},
+		types = { "WATER", "PSYCHIC_TYPE" },
+		baseStats = { 
+			hp = 95, 
+			attack = 75, 
+			defense = 80, 
+			speed = 30, 
+			special = 110 },
+		catchRate = 70, 
+		baseExp = 164, 
+		growthRate = "MEDIUM_FAST",
+		level1Moves = { "TACKLE" }, 
+		learnset = {
+			{ level = 6, move = "GROWL" },
+			{ level = 15, move = "WATER_GUN" },
+			{ level = 20, move = "CONFUSION" },
+			{ level = 29, move = "DISABLE" },
+			{ level = 34, move = "HEADBUTT" },
+			{ level = 48, move = "PSYCHIC_M" },
+			}, 
+		tmhm = {
+		  "TOXIC",
+		  "BODY_SLAM",
+		  "TAKE_DOWN",
+		  "DOUBLE_EDGE",
+		  "BUBBLEBEAM",
+		  "WATER_GUN",
+		  "ICE_BEAM",
+		  "BLIZZARD",
+		  "PAY_DAY",
+		  "RAGE",
+		  "EARTHQUAKE",
+		  "FISSURE",
+		  "DIG",
+		  "PSYCHIC_M",
+		  "TELEPORT",
+		  "MIMIC",
+		  "DOUBLE_TEAM",
+		  "REFLECT",
+		  "BIDE",
+		  "FIRE_BLAST",
+		  "SWIFT",
+		  "SKULL_BASH",
+		  "REST",
+		  "THUNDER_WAVE",
+		  "PSYWAVE",
+		  "TRI_ATTACK",
+		  "SUBSTITUTE",
+		  "SURF",
+		  "STRENGTH",
+		  "FLASH",
+		},
+		spriteFront = mod.assets:path("assets/_temp_front.png"),
+		spriteBack = mod.assets:path("assets/_temp_back.png"),
+		frontSize = 5,
+		palette = "SLOWKING",
+		evolutions = {}
+	})
+	mod.content.cries:register("SLOWKING", { file = mod.assets:path("assets/slowking_cry.wav") })
+	mod.content.icons:register("SLOWKING", "MON")
+	dex_no = dex_no + 1
 
 	-- Magnemite Line
 	mod.content.pokemon:patch("MAGNEMITE", { dex = dex_no })
 	dex_no = dex_no + 1
-	mod.content.pokemon:patch("MAGNETON", { dex = dex_no })
+	mod.content.pokemon:patch("MAGNETON", { dex = dex_no,
+	evolutions = {
+		{
+		item = "THUNDER_STONE",
+		level = 1,
+		method = "ITEM",
+		species = "MAGNEZONE"
+		},
+		}
+	}
+	)
 	dex_no = dex_no + 1
-	-- NEW MON: MAGNEZONE
+	mod.content.text:register("_MagnezoneDexEntry", "TO BE WRITTEN.")
+	mod.content.palettes:register("MAGNEZONE", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
+	mod.content.pokemon:register("MAGNEZONE", {
+		id = "MAGNEZONE", 
+		name = "MAGNEZONE", 
+		dex = dex_no, 
+		types = { "ELECTRIC" },
+		dexEntry = { 
+			heightFt = 3,
+			heightIn = 11,
+			kind = "MAGNET AREA         ",
+			weight = 3968,
+			text = ("_MagnezoneDexEntry")
+		},
+		catchRate = 30, 
+		baseExp = 211, 
+		growthRate = "MEDIUM_FAST",
+		baseStats = { 
+			hp = 70, 
+			attack = 70, 
+			defense = 115, 
+			speed = 60, 
+			special = 130 },
+		level1Moves = { "BARRIER", "TACKLE", "THUNDERSHOCK", "SUPERSONIC" }, 
+		learnset = {
+			{ level = 6, move = "THUNDERSHOCK" },
+			{ level = 11, move = "SUPERSONIC" },
+			{ level = 14, move = "SONICBOOM" },
+			{ level = 17, move = "THUNDER_WAVE" },
+			{ level = 22, move = "SPARK" },
+			{ level = 34, move = "SCREECH" },
+			}, 
+		tmhm = {
+		  "TOXIC",
+		  "TAKE_DOWN",
+		  "DOUBLE_EDGE",
+		  "HYPER_BEAM",
+		  "RAGE",
+		  "THUNDERBOLT",
+		  "THUNDER",
+		  "TELEPORT",
+		  "MIMIC",
+		  "DOUBLE_TEAM",
+		  "REFLECT",
+		  "BIDE",
+		  "SWIFT",
+		  "REST",
+		  "THUNDER_WAVE",
+		  "SUBSTITUTE",
+		  "FLASH",
+		},
+		spriteFront = mod.assets:path("assets/_temp_front.png"),
+		spriteBack = mod.assets:path("assets/_temp_back.png"),
+		frontSize = 5,
+		palette = "MAGNEZONE",
+		evolutions = {}
+	})
+	mod.content.cries:register("MAGNEZONE", { file = mod.assets:path("assets/magnezone_cry.wav") })
+	mod.content.icons:register("MAGNEZONE", "BALL")
+	dex_no = dex_no + 1
 
 	-- Farfetch’d Line
 	mod.content.pokemon:patch("FARFETCHD", { dex = dex_no })
@@ -350,9 +894,75 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Onix Line
-	mod.content.pokemon:patch("ONIX", { dex = dex_no })
+	mod.content.pokemon:patch("ONIX", { dex = dex_no,
+		evolutions = {
+			{method = "LEVEL",
+			level = 45,
+			species = "STEELIX"
+			}
+		}
+	})
 	dex_no = dex_no + 1
-	-- NEW MON: STEELIX
+	mod.content.text:register("_SteelixDexEntry", "TO BE WRITTEN.")
+	mod.content.palettes:register("STEELIX", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
+	mod.content.pokemon:register("STEELIX", {
+		id = "STEELIX", 
+		name = "STEELIX", 
+		dex = dex_no, 
+		types = { "ROCK", "GROUND" },
+		dexEntry = { 
+			heightFt = 30,
+			heightIn = 2,
+			kind = "IRON SNAKE         ",
+			weight = 8818,
+			text = ("_SteelixDexEntry")
+		},
+		catchRate = 25, 
+		baseExp = 196, 
+		growthRate = "MEDIUM_FAST",
+		baseStats = { 
+			hp = 75, 
+			attack = 85, 
+			defense = 200, 
+			speed = 30, 
+			special = 65 },
+		level1Moves = { "TACKLE", "SCREECH" }, 
+		learnset = {
+			{ level = 10, move = "BIND" },
+			{ level = 14, move = "ROCK_THROW" },
+			{ level = 23, move = "HARDEN" },
+			{ level = 27, move = "RAGE" },
+			{ level = 40, move = "SLAM" },
+			}, 
+		tmhm = {
+		  "TOXIC",
+		  "BODY_SLAM",
+		  "TAKE_DOWN",
+		  "DOUBLE_EDGE",
+		  "RAGE",
+		  "EARTHQUAKE",
+		  "FISSURE",
+		  "DIG",
+		  "MIMIC",
+		  "DOUBLE_TEAM",
+		  "BIDE",
+		  "SELFDESTRUCT",
+		  "SKULL_BASH",
+		  "REST",
+		  "EXPLOSION",
+		  "ROCK_SLIDE",
+		  "SUBSTITUTE",
+		  "STRENGTH",
+		},
+		spriteFront = mod.assets:path("assets/_temp_front.png"),
+		spriteBack = mod.assets:path("assets/_temp_back.png"),
+		frontSize = 5,
+		palette = "STEELIX",
+		evolutions = {}
+	})
+	mod.content.cries:register("STEELIX", { file = mod.assets:path("assets/steelix_cry.wav") })
+	mod.content.icons:register("STEELIX", "SNAKE")
+	dex_no = dex_no + 1
 
 	-- Drowzee Line
 	mod.content.pokemon:patch("DROWZEE", { dex = dex_no })
@@ -412,11 +1022,12 @@ return function(mod)
 
 	-- Chansey Line
 	mod.content.text:register("_HappinyDexEntry", "It likes to collect\nand carry white\nround stones. It\ngives its stone to\nthose it considers\nits friend.")
-	mod.content.palettes:register("HAPPINY", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
+	mod.content.palettes:register("HAPPINY_PAL", { {255,255,255}, {244,176,199}, {227,121,170}, {0,0,0} } )
 	mod.content.pokemon:register("HAPPINY", {
 		id = "HAPPINY", 
 		name = "HAPPINY", 
 		dex = dex_no, 
+		palette = "HAPPINY_PAL",
 		dexEntry = { 
 			heightFt = 2,
 			heightIn = 0,
@@ -475,16 +1086,15 @@ return function(mod)
 			"TRI_ATTACK",
 			"SUBSTITUTE",
 			"STRENGTH",
-			"FLASH",
+			"FLASH"
 		},
 		evolutions = { { method = "FRIENDSHIP", species = "CHANSEY" }, { method = "LEVEL", level = 15, species = "CHANSEY" } },
 		spriteFront = mod.assets:path("assets/happiny_front.png"),
 		spriteBack = mod.assets:path("assets/happiny_back.png"),
-		frontSize = 5,
-		palette = "HAPPINY"
+		frontSize = 5
 	})
 	mod.content.cries:register("HAPPINY", { file = mod.assets:path("assets/happiny_cry.wav") })
-	mod.content.icons:register("HAPPINY", { image = "quadruped" })
+	mod.content.icons:register("HAPPINY", "FAIRY")
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("CHANSEY", { dex = dex_no })
 	dex_no = dex_no + 1
@@ -640,7 +1250,7 @@ return function(mod)
 
 	-- Testing Code
 	mod.content.encounters:patch("ROUTE_1", {
-	grass = { slots = { __prepend = { { species = "HAPPINY", level = 5 } } } },
+	grass = { slots = { __prepend = { { species = "STEELIX", level = 5 } } } },
 	})
 
 	-- Adjust the Pokédex Size
