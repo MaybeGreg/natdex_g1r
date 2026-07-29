@@ -5,6 +5,24 @@ return function(mod)
 		return trigger.kind == "levelup" and (mon.friendship or 0) >= 220
 		end,
 	})
+	mod.content.evolution_methods:register("TYROGUE_CHAN", {
+		check = function(game, mon, evo, trigger)
+		return trigger.kind == "levelup" and (mon.friendship or 0) >= 220
+		end,
+	})
+	mod.content.evolution_methods:register("TYROGUE_LEE", {
+		check = function(game, mon, evo, trigger)
+		return trigger.kind == "levelup" and (mon.friendship or 0) >= 220
+		end,
+	})
+	mod.content.evolution_methods:register("TYROGUE_TOP", {
+		check = function(game, mon, evo, trigger)
+		return trigger.kind == "levelup" and (mon.friendship or 0) >= 220
+		end,
+	})
+	mod.content.items:register("LINKING_CORD", {
+	  id = "LINKING_CORD", name = "LINKING CORD", price = 2100, tossable = true,
+	})
 
 	-- Start from One
 	dex_no = 1
@@ -75,8 +93,6 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("ARBOK", { dex = dex_no })
 	dex_no = dex_no + 1
-
-	
 
 	-- Pikachu Line
 	mod.content.text:register("_PichuDexEntry", "It's too small to \ncontain its \nelectricity. When \nit discharges it\nends up shocking\nitself.")
@@ -168,7 +184,7 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Clefairy Line
-	mod.content.text:register("_CleffaDexEntry", "TO BE WRITTEN.")
+	mod.content.text:register("_CleffaDexEntry", "A child born from the stars.\nCan be heard humming sometimes.")
 	mod.content.palettes:register("CLEFFA", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
 	mod.content.pokemon:register("CLEFFA", {
 		id = "CLEFFA", 
@@ -251,7 +267,7 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Jigglypuff Line
-	mod.content.text:register("_IgglybuffDexEntry", "TO BE WRITTEN.")
+	mod.content.text:register("_IgglybuffDexEntry", "If the wind is strong\nit can be seen struggling\nto hold on.")
 	mod.content.palettes:register("IGGLYBUFF", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
 	mod.content.pokemon:register("IGGLYBUFF", {
 		id = "IGGLYBUFF", 
@@ -332,7 +348,7 @@ return function(mod)
 	mod.content.pokemon:patch("GOLBAT", { dex = dex_no,
 		evolutions = { { method = "FRIENDSHIP", species = "CROBAT" }, { method = "LEVEL", level = 45, species = "CROBAT" } },	})
 	dex_no = dex_no + 1
-	mod.content.text:register("_CrobatDexEntry", "TO BE WRITTEN.")
+	mod.content.text:register("_CrobatDexEntry", "The wings are silent.\nThis makes CROBAT much\nmore threatening.")
 	mod.content.palettes:register("CROBAT", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
 	mod.content.pokemon:register("CROBAT", {
 		id = "CROBAT", 
@@ -398,7 +414,7 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("VILEPLUME", { dex = dex_no })
 	dex_no = dex_no + 1
-	mod.content.text:register("_BellossomDexEntry", "TO BE WRITTEN.")
+	mod.content.text:register("_BellossomDexEntry", "On sunny days,\nBELLOSSOM can be see\nholding dance contests.")
 	mod.content.palettes:register("BELLOSSOM", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
 	mod.content.pokemon:register("BELLOSSOM", {
 		id = "BELLOSSOM", 
@@ -488,7 +504,7 @@ return function(mod)
 		evolutions = { { method = "LEVEL", level = 45, species = "ANNIHILAPE" } }	
 	})
 	dex_no = dex_no + 1
-	mod.content.text:register("_AnnihilapeDexEntry", "TO BE WRITTEN.")
+	mod.content.text:register("_AnnihilapeDexEntry", "Even in death, the\nrage of ANNIHILAPE\npersists.")
 	mod.content.palettes:register("ANNIHILAPE", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
 	mod.content.pokemon:register("ANNIHILAPE", {
 		id = "ANNIHILAPE", 
@@ -582,7 +598,7 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("POLIWRATH", { dex = dex_no })
 	dex_no = dex_no + 1
-	mod.content.text:register("_PolitoedDexEntry", "TO BE WRITTEN.")
+	mod.content.text:register("_PolitoedDexEntry", "It prefers being by\nthe riverside.\nIt enjoys jumping across\nrivers.")
 	mod.content.palettes:register("POLITOED", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
 	mod.content.pokemon:register("POLITOED", {
 		id = "POLITOED", 
@@ -707,7 +723,7 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("SLOWBRO", { dex = dex_no })
 	dex_no = dex_no + 1
-	mod.content.text:register("_SlowkingDexEntry", "TO BE WRITTEN.")
+	mod.content.text:register("_SlowkingDexEntry", "While it seems wise,\neverything it knows is\nten years out of date.")
 	mod.content.palettes:register("SLOWKING", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
 	mod.content.pokemon:register("SLOWKING", {
 		id = "SLOWKING", 
@@ -796,7 +812,7 @@ return function(mod)
 	}
 	)
 	dex_no = dex_no + 1
-	mod.content.text:register("_MagnezoneDexEntry", "TO BE WRITTEN.")
+	mod.content.text:register("_MagnezoneDexEntry", "Reforged, MAGNEZONE has more\nmagnetic power than ever\nbefore. Interferes\nwith TV signals.")
 	mod.content.palettes:register("MAGNEZONE", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
 	mod.content.pokemon:register("MAGNEZONE", {
 		id = "MAGNEZONE", 
@@ -894,74 +910,7 @@ return function(mod)
 	dex_no = dex_no + 1
 
 	-- Onix Line
-	mod.content.pokemon:patch("ONIX", { dex = dex_no,
-		evolutions = {
-			{method = "LEVEL",
-			level = 45,
-			species = "STEELIX"
-			}
-		}
-	})
-	dex_no = dex_no + 1
-	mod.content.text:register("_SteelixDexEntry", "TO BE WRITTEN.")
-	mod.content.palettes:register("STEELIX", {{255,255,255},{247,223,111},{207,159,0},{0,0,0}})
-	mod.content.pokemon:register("STEELIX", {
-		id = "STEELIX", 
-		name = "STEELIX", 
-		dex = dex_no, 
-		types = { "ROCK", "GROUND" },
-		dexEntry = { 
-			heightFt = 30,
-			heightIn = 2,
-			kind = "IRON SNAKE         ",
-			weight = 8818,
-			text = ("_SteelixDexEntry")
-		},
-		catchRate = 25, 
-		baseExp = 196, 
-		growthRate = "MEDIUM_FAST",
-		baseStats = { 
-			hp = 75, 
-			attack = 85, 
-			defense = 200, 
-			speed = 30, 
-			special = 65 },
-		level1Moves = { "TACKLE", "SCREECH" }, 
-		learnset = {
-			{ level = 10, move = "BIND" },
-			{ level = 14, move = "ROCK_THROW" },
-			{ level = 23, move = "HARDEN" },
-			{ level = 27, move = "RAGE" },
-			{ level = 40, move = "SLAM" },
-			}, 
-		tmhm = {
-		  "TOXIC",
-		  "BODY_SLAM",
-		  "TAKE_DOWN",
-		  "DOUBLE_EDGE",
-		  "RAGE",
-		  "EARTHQUAKE",
-		  "FISSURE",
-		  "DIG",
-		  "MIMIC",
-		  "DOUBLE_TEAM",
-		  "BIDE",
-		  "SELFDESTRUCT",
-		  "SKULL_BASH",
-		  "REST",
-		  "EXPLOSION",
-		  "ROCK_SLIDE",
-		  "SUBSTITUTE",
-		  "STRENGTH",
-		},
-		spriteFront = mod.assets:path("assets/_temp_front.png"),
-		spriteBack = mod.assets:path("assets/_temp_back.png"),
-		frontSize = 5,
-		palette = "STEELIX",
-		evolutions = {}
-	})
-	mod.content.cries:register("STEELIX", { file = mod.assets:path("assets/steelix_cry.wav") })
-	mod.content.icons:register("STEELIX", "SNAKE")
+	mod.content.pokemon:patch("ONIX", { dex = dex_no})
 	dex_no = dex_no + 1
 
 	-- Drowzee Line
@@ -1114,7 +1063,6 @@ return function(mod)
 	dex_no = dex_no + 1
 	mod.content.pokemon:patch("SEADRA", { dex = dex_no })
 	dex_no = dex_no + 1
-	-- NEW MON: KINGDRA
 
 	-- Goldeen Line
 	mod.content.pokemon:patch("GOLDEEN", { dex = dex_no })
@@ -1136,7 +1084,6 @@ return function(mod)
 	-- Scyther Line
 	mod.content.pokemon:patch("SCYTHER", { dex = dex_no })
 	dex_no = dex_no + 1
-	-- NEW MON: SCIZOR
 	-- NEW MON: KLEAVOR
 
 	-- Jynx Line
@@ -1188,10 +1135,8 @@ return function(mod)
 	mod.content.pokemon:patch("FLAREON", { dex = dex_no })
 	dex_no = dex_no + 1
 	-- NEW MON: ESPEON
-	-- NEW MON: UMBREON
 	-- NEW MON: LEAFEON
 	-- NEW MON: GLACEON
-	-- NEW MON: SYLVEON
 
 	-- Porygon Line
 	mod.content.pokemon:patch("PORYGON", { dex = dex_no })
@@ -1250,7 +1195,7 @@ return function(mod)
 
 	-- Testing Code
 	mod.content.encounters:patch("ROUTE_1", {
-	grass = { slots = { __prepend = { { species = "STEELIX", level = 5 } } } },
+	grass = { slots = { __prepend = { { species = "PICHU", level = 5 } } } },
 	})
 
 	-- Adjust the Pokédex Size
